@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("img").show().fadeOut(3000).slideDown("slow").fadeOut(1000);
+            });
+        });
+    </script>
+    <button>메소드 체인시작</button>
+    <img src="../img/apple2.png" width="120" height="100"
+    style="display: none;" alt="apple">
+</body>
+</html>
