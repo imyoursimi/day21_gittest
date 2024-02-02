@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <style>
+
+        div{
+            width: 70px;
+            height: 50px;
+            float: left;
+            margin: 5px;
+            background-color: red;
+        }
+        .next{
+            background-color: blue;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function(){
+            var modWidth=50;
+            var posiNeg=true;
+            $("div").click(function(){
+                // $(this).width(modWidth).addClass("next");
+                // // 줄어들다가 다시 늘어나게 바꾸기
+                // modWidth-=8;
+
+                if(posiNeg==true){
+                    $(this).width(modWidth).addClass("next");
+                    // 줄어들다가 다시 늘어나게 바꾸기
+                    modWidth-=8;
+
+                    if(modWidth<9){
+                        posiNeg=false;
+                    }
+                }else if(posiNeg==false){
+                    $(this).width(modWidth).addClass("next");
+                    // 줄어들다가 다시 늘어나게 바꾸기
+                    modWidth+=8;
+                    if(modWidth>50){
+                        posiNeg=true;
+                    }
+                }
+
+                //일단 풀어보긴 했는데 뭔가 이게 아닌거같다?........
+
+
+            });
+        });
+
+    </script>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+</body>
+</html>
